@@ -12,12 +12,11 @@
 
 body, html {
 
+	background: #EF6F55;
 }
 
 .main-wrapper {
-	background: #EF6F55;
 	width: 97%;
-	min-height: 100%;
 	margin: 5px auto 0;
 	border-radius: 5px;
 }
@@ -38,27 +37,35 @@ h1.logo-text {
 
 p.subline {
 	font-family: 'infernosspicymedium';
-	font-size: 130%;
+	font-size: 140%;
 	font-weight: bold;
-	text-decoration: underline;
 	font-style: italic;
-	color: #952922;
+	color: #580000;
 	text-align: center;
+	background: #FC49ED;
+	border-radius: 50%;
 }
 
 
 
 form input[type=text] {
-	width: 80%;
+	width: 90%;
+	height: 30px;
 	display: block;
-	margin: 30px auto 0;
+	margin: 15px auto 0;
+	font-size: 125%;
+	font-family: 'infernosspicymedium';
+	font-weight: bold;
 }
 
 form input[type=submit] {
 	display: block;
 	width: auto;
 	margin: 10px auto 0;
-	background-color: #B44137;
+	background-color: #FC49ED;
+	font-family: 'infernosspicymedium';
+	font-weight: bold;
+	font-size: 135%;
 }
 
 .add-list{
@@ -67,23 +74,123 @@ form input[type=submit] {
 
 .add-list li {
 	border: 3px solid black;
-	width: 80%;
+	width: 90%;
 	display: block;
-	margin: 10px auto;
+	margin: 5px auto;
 	border-radius: 10px;
 	padding: 5px;
 	font-size: 125%;
 	font-weight: bold;
-	background-color: #E78345;
+	background: #E78345;
+	
 }
 
 .footer-text {
 	font-family: 'infernosspicymedium';
 	font-size: 120%;
 	font-weight: bold;
-	text-decoration: underline;
 	font-style: italic;
-	color: #952922;
+	color: #A6370F;
 	text-align: center;
-	margin-top: 10px;
+	
+}
+
+div.counter-wrapper {
+	width: 90%;
+	margin: 0 auto;
+
+}
+
+p.item-counter {
+	width: 30%;
+	float: left;
+	font-family: cursive;
+	font-style: italic;
+	font-size: 100%;
+	color: #000;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 3px;
+	background-color: #FC49ED;
+
+}
+
+button.delete-all {
+	margin-top: -1px;
+	float: right;
+	font-family: cursive;
+	font-style: italic;
+	font-size: 100%;
+	color: #000;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: #FC49ED;
+}
+
+form input.email-submit {
+	float: right;
+	width: 28%;
+	font-size: 95%;
+	font-family: cursive;
+}
+
+form input.email-input {
+	float: left;
+	width: 70%;
+	margin-top: 7px;
+	font-family: cursive, serif, 'sans-serif';
+	font-size: 100%;
+}
+
+.delete-icon {
+	width: 30px;
+	height: 23px;
+	background: url('../images/delete.png') no-repeat right;
+	background-size: 100% 100%;
+	float: right;
+	padding: 0;
+	margin:0;
+	border: 0;
+
+}
+
+#main-input {
+	border: 1px solid #FC49ED;
+	background-color: #FFC4B8;
+	border-radius: 7px;
+	color: #000;
+}
+
+#main-input:focus, .email-input:focus  {
+	border-radius: 10px;
+	border: 2px solid #71b4fc;
+	outline: none;
+}
+
+.email-input {
+	border: 1px solid #FC49ED;
+	border-radius: 7px;
+}
+
+
+/************PLACE HOLDER STYLING WITH WEBKITS***********/
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ada2a2;
+    font-size: 80%;
+    font-family: cursive, sans-serif;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    red;
+    opacity:  1;
+    font-size: 100%;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    red;
+    opacity:  1;
+    font-size: 100%;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    red;
+    font-size: 100%;
 }

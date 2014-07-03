@@ -7,9 +7,10 @@
 
 	<title>Bacon n Cheese</title>
 
-	<link rel="stylesheet" href="css/style.css">
+	
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/clearfix-borderbox.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -21,26 +22,33 @@
 		</div>
 		
 		<br class="clear">
-		<p class="subline">Never forget the bacon again!</p>
+		<p class="subline">Create your own shopping list!</p>
 
 		<form action="script.php" class="form-pig">
-			<input type="text" name="item">
+			<input type="text" name="item" id="main-input">
 			<input type="submit" value="Add Item">
 		</form>
 
 		<ul class="add-list">
-			<li>Eggs</li>
-			<li>Bacon</li>
-			<li>Cheese</li>
-			<li>Water</li>
-			<li>Cigarettes</li>
-			<li>Salmon</li>
+			<li class="clearfix">Eggs <button class="delete-icon"></button></li>
+			<li>Bacon <button class="delete-icon"></button></li>
+			<li>Cheese <button class="delete-icon"></button></li>
+			<li>Water <button class="delete-icon"></button></li>
+			<li>Cigarettes <button class="delete-icon"></button></li>
+			<li>Salmon <button class="delete-icon"></button></li>
 		</ul>
+		
+		<div class="counter-wrapper">
+			<p class="item-counter"><span class="counter">6</span> Item(s)</p>
+			<button class="delete-all">Delete all</button>
+			<br class="clear">
+		</div>
 
+		<span class="clear">
 		<footer>
-			<p class="footer-text">Email your list to your inbox!</p>
-			<form action="script-email.php">
-				<input type="submit">
+			<form action="script-email.php" class="clearfix">
+				<input type="text" placeholder="Email your list to your inbox" name="email" class="email-input">
+				<input type="submit" value="Send list" class="email-submit">
 			</form>
 		</footer>
 
