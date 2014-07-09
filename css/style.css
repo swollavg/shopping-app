@@ -151,7 +151,18 @@ form input.email-input {
 	padding: 0;
 	margin:0;
 	border: 0;
+}
 
+.edit-icon {
+	width: 30px;
+	height: 23px;
+	background: url('../images/pencil-icon.png') no-repeat right;
+	background-size: 100% 100%;
+	float: right;
+	padding: 0;
+	margin:0;
+	margin-right: 10px;
+	border: 0
 }
 
 #main-input {
