@@ -142,7 +142,7 @@ form input.email-input {
 	font-size: 100%;
 }
 
-.delete-icon {
+#delete-icon {
 	width: 30px;
 	height: 23px;
 	background: url('../images/delete.png') no-repeat right;
