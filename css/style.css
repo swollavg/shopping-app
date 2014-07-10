@@ -183,6 +183,19 @@ form input.email-input {
 	border-radius: 7px;
 }
 
+#edit {
+	display: none;
+	border: 3px solid black;
+	width: 90%;
+	margin: 5px auto;
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 125%;
+	font-weight: bold;
+	background: #E78345;
+	font-family: 'infernosspicymedium';
+}
+
 
 /************PLACE HOLDER STYLING WITH WEBKITS***********/
 

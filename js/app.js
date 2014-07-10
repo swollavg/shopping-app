@@ -4,9 +4,12 @@ $(document).ready(function(){
 		event.preventDefault();  // prevents the page from reloading
 	});  // end click main submit button
 
-	$('.add-list').on('click', '#delete-icon', function(){
+	$('.add-list').on('click', '#delete-icon', function(event){
+		event.stopPropagation();
 		$(this).parent().remove();
 	});
+
+	
 
 
 }); // Ready handler end
