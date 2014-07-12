@@ -153,7 +153,7 @@ form input.email-input {
 	border: 0;
 }
 
-.edit-icon {
+#edit-icon {
 	width: 30px;
 	height: 23px;
 	background: url('../images/pencil-icon.png') no-repeat right;
@@ -194,6 +194,8 @@ form input.email-input {
 	font-weight: bold;
 	background: #E78345;
 	font-family: 'infernosspicymedium';
+	background: url('../images/save.png') right no-repeat;
+	background-size: 30px 23px;
 }
 
 
