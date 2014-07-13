@@ -125,6 +125,7 @@ button.delete-all {
 	border: 1px solid black;
 	border-radius: 10px;
 	background-color: #FC49ED;
+	outline: none;
 }
 
 form input.email-submit {
@@ -132,6 +133,8 @@ form input.email-submit {
 	width: 28%;
 	font-size: 95%;
 	font-family: cursive;
+	border-radius: 10px;
+	outline: none;
 }
 
 form input.email-input {
@@ -186,17 +189,45 @@ form input.email-input {
 #edit {
 	display: none;
 	border: 3px solid black;
-	width: 90%;
-	margin: 5px auto;
+	width: 85%;
+	float: left;
 	border-radius: 10px;
 	padding: 5px;
 	font-size: 125%;
 	font-weight: bold;
 	background: #E78345;
 	font-family: 'infernosspicymedium';
-	background: url('../images/save.png') right no-repeat;
-	background-size: 30px 23px;
 }
+
+#edit:focus {
+	outline: none;
+}
+
+#save-wrapper {
+	display: none;
+	border: 3px solid black;
+	width: 90%;
+	border-radius: 10px;
+	margin: 5px auto;
+	background: #E78345;
+}
+
+#save-wrapper input[type="text"] {
+    border: none;
+}
+
+#save-wrapper input[type="submit"] {
+   float: right;
+    width: 30px;
+	height: 23px;
+	background: url('../images/save.png') no-repeat right;
+	background-size: 100% 100%;
+	float: right;
+	padding: 0;
+	margin-right: 10px;
+	margin-top: 5px;
+	border: 0
+} 
 
 
 /************PLACE HOLDER STYLING WITH WEBKITS***********/
