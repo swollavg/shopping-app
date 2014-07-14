@@ -21,15 +21,34 @@ body, html {
 	border-radius: 5px;
 }
 
+#pig-wrapper {
+	position: relative;
+}
+
+header {
+	position: relative;
+}
+
+
+
 .header .pig-pic {
-	width: 80px;
+	width: 110px;
 	display: block;
 	float: left;
 }
 
+.after-logo {
+	display: none;
+	width: 100px;
+	height: 80px;
+	position: absolute;
+	left: 24px;
+	top: 8px;
+}
+
 h1.logo-text {
 	font-family: 'infernosspicymedium';
-	font-size: 240%;
+	font-size: 209%;
 	float: right;
 	font-weight: bold;
 	line-height: 110px;
@@ -82,7 +101,12 @@ form input[type=submit] {
 	font-size: 125%;
 	font-weight: bold;
 	background: #E78345;
+	text-decoration: none;
 	
+}
+
+.strike {
+	text-decoration: none;
 }
 
 .footer-text {
