@@ -12,13 +12,22 @@
 
 body, html {
 
-	background: #EF6F55;
+	background: #A76153;
 }
 
 .main-wrapper {
-	width: 97%;
+	max-width: 768px;
 	margin: 5px auto 0;
 	border-radius: 5px;
+	border: 5px solid #424040;
+	border-radius: 20px;
+	margin-bottom: 15px;
+	background: #EF6F55;
+}
+
+.header, .email-input, .subline, footer form  {
+	width: 90%;
+	margin: 0 auto 10px;
 }
 
 #pig-wrapper {
@@ -32,23 +41,23 @@ header {
 
 
 .header .pig-pic {
-	width: 110px;
+	width: 135px;
 	display: block;
 	float: left;
 }
 
-.after-logo {
+.after-logo{
 	display: none;
-	width: 100px;
-	height: 80px;
+	width: 135px;
+	height: 100px;
 	position: absolute;
 	left: 24px;
-	top: 8px;
-}
+	top: 4px;
+	}
 
 h1.logo-text {
 	font-family: 'infernosspicymedium';
-	font-size: 209%;
+	font-size: 320%;
 	float: right;
 	font-weight: bold;
 	line-height: 110px;
@@ -72,7 +81,7 @@ form input[type=text] {
 	height: 30px;
 	display: block;
 	margin: 15px auto 0;
-	font-size: 125%;
+	font-size: 175%;
 	font-family: 'infernosspicymedium';
 	font-weight: bold;
 }
@@ -98,7 +107,7 @@ form input[type=submit] {
 	margin: 5px auto;
 	border-radius: 10px;
 	padding: 5px;
-	font-size: 125%;
+	font-size: 175%;
 	font-weight: bold;
 	background: #E78345;
 	text-decoration: none;
@@ -121,12 +130,12 @@ form input[type=submit] {
 
 div.counter-wrapper {
 	width: 90%;
-	margin: 0 auto;
+	margin: 10px auto 0;
 
 }
 
 p.item-counter {
-	width: 30%;
+	width: 133px;
 	float: left;
 	font-family: cursive;
 	font-style: italic;
@@ -170,8 +179,8 @@ form input.email-input {
 }
 
 #delete-icon {
-	width: 30px;
-	height: 23px;
+	width: 35px;
+	height: 28px;
 	background: url('../images/delete.png') no-repeat right;
 	background-size: 100% 100%;
 	float: right;
@@ -181,8 +190,8 @@ form input.email-input {
 }
 
 #edit-icon {
-	width: 30px;
-	height: 23px;
+	width: 35px;
+	height: 28px;
 	background: url('../images/pencil-icon.png') no-repeat right;
 	background-size: 100% 100%;
 	float: right;
@@ -217,7 +226,7 @@ form input.email-input {
 	float: left;
 	border-radius: 10px;
 	padding: 5px;
-	font-size: 125%;
+	font-size: 175%;
 	font-weight: bold;
 	background: #E78345;
 	font-family: 'infernosspicymedium';
@@ -242,8 +251,8 @@ form input.email-input {
 
 #save-wrapper input[type="submit"] {
    float: right;
-    width: 30px;
-	height: 23px;
+    width: 35px;
+	height: 28px;
 	background: url('../images/save.png') no-repeat right;
 	background-size: 100% 100%;
 	float: right;
@@ -262,16 +271,204 @@ form input.email-input {
     font-family: cursive, sans-serif;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    red;
-    opacity:  1;
-    font-size: 100%;
+    color:    #ada2a2;
+    font-size: 80%;
+    font-family: cursive, sans-serif;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    red;
-    opacity:  1;
-    font-size: 100%;
+    color:    #ada2a2;
+    font-size: 80%;
+    font-family: cursive, sans-serif;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    red;
-    font-size: 100%;
+    color:    #ada2a2;
+    font-size: 80%;
+    font-family: cursive, sans-serif;
+
 }
+
+
+
+
+
+
+
+/**************ANIMATIONS****************/
+
+ul.add-list li.new-item  {
+        opacity: 0;
+        -webkit-animation: fadeIn .5s linear forwards;
+        -moz-animation: fadeIn .5s linear forwards;
+        -o-animation: fadeIn .5s linear forwards;
+        animation: fadeIn .5s linear forwards;
+    }
+
+
+@-webkit-keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+ul.add-list li.removed-item {
+	    -webkit-animation: removed-item-animation .6s ease-out forwards;
+	    -moz-animation: removed-item-animation .6s ease-out forwards;
+	    -o-animation: removed-item-animation .6s ease-out forwards;
+        animation: removed-item-animation .6s ease-out forwards;
+        
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+@-webkit-keyframes removed-item-animation {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+ 
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+}
+
+@-moz-keyframes removed-item-animation {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+ 
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+}
+
+@-o-keyframes removed-item-animation {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+ 
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+}
+
+@keyframes removed-item-animation {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+ 
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+}
+
+
+
+
+
+
+/*************MEDIA QUERIES****************/
+
+
+
+
+@media (max-width: 768px) {
+
+	.main-wrapper {
+		margin: 10px;
+	}
+	
+}
+
+@media (max-width: 550px) {
+
+
+	.add-list li {
+		font-size: 145%;
+	}
+
+
+	form input[type=text] #main-input {
+		font-size: 145%;
+	}
+
+	#delete-icon {
+		width: 30px;
+		height: 23px;
+	}
+	
+	#edit-icon {
+		width: 30px;
+		height: 23px;
+	}
+
+	#save-wrapper input[type="submit"] {
+		width: 30px;
+		height: 23px;
+		}
+
+	#edit {
+		width: 80%;
+		font-size: 145%;
+	}
+
+	.header .pig-pic{
+		width: 95px;
+		margin-left: -10px;
+
+	}
+
+	h1.logo-text {
+		font-size: 195%;
+		
+	}
+
+	.after-logo {
+		top: -4px;
+		left: -7px;
+		height: 80px;
+	}
+
+	.main-wrapper {
+		margin: 5px;
+		border-width: 3px;
+	}
+
+	
+
+}
+
+

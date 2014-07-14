@@ -1,42 +1,65 @@
 $(document).ready(function(){
 	
+        // Adds Items to list
 		$('#main-submit').click(function(event){
 			addToList();
-			event.preventDefault();  // prevents the page from reloading
-		});  // end click main submit button
+			event.preventDefault();  
+		});  
 
+
+		// deletes an items
 		$('.add-list').on('click', '#delete-icon', function(event){
 			event.stopPropagation();
-			$(this).parent().remove();
+
+			// adds removed class for the transition. Callback function to remove item from DOM
+			$(this).parent('li').addClass('removed-item').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
+            function(e) {
+    			$(this).remove();
+			});  
 			
 			count -= 1; // decreases counter
 			$('.counter').text(count);
 
-			$('.after-logo').fadeIn(1000).delay(500).fadeOut(1000);
-		}); // deletes an items
+			$('.after-logo').fadeIn(1500).fadeOut(500); //pig smoke logo
+		}); 
 
-		$('.add-list').on('click', '#edit-icon', function(){
+
+
+		// allows editing of content, swaps to text input
+		$('.add-list').on('click', '#edit-icon', function(event){
+			event.stopPropagation();
 			$(this).closest('li').hide().next().show()
 			.children(":first").css('display', 'block').next()
 			.show().prev().val($(this).prev().prev().text());
 
-			$('.after-logo').finish().fadeIn(1000).delay(500).fadeOut(1000);
-		}); // allows editing of content
+			
+		}); 
 
+
+
+		// saves edited content
 		$('.add-list').on('click', '#save', function(){
 			$(this).hide().prev().hide().closest('div').hide().prev()
 			.show().children(":first").text($(this).prev().val());
 			
-		}); // saves edited content
+		}); 
 
+
+
+		// deletes all the list items.
 		$('.delete-all').click(function(){
-			$('.add-list').children('li').remove();
-			count = 0;
+			count = 0; //resets counter to zero
 			$('.counter').text(count);  // sets counter
-		}); // deletes all the items in the list
+			// applies removed-item animation
+			$('.add-list').children('li').addClass('removed-item').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
+            function(e) {
+    			$('.add-list').children('li').remove();
+			});
+		}); 
 
 		
 
+		// checks and unchecks the list item.
 		$('.add-list').on('click', 'li', function(event){
 			event.stopPropagation();
 
@@ -49,25 +72,44 @@ $(document).ready(function(){
            		$(this).css('text-decoration', 'none');
            		$(this).addClass('strike');
            }
-        }); // checks and unchecks the list item.
+        }); 
+
+        $('.email-submit').click(function(event){
+        	if($(this).prev().val()) {
+        		alert('Your email has been sent..Well not really, but you get the point :)');
+        	    event.preventDefault();
+
+        	    $(this).prev().val('');
+
+        		
+        	}
+
+        	else {
+				alert('You need to provide an email address');
+				event.preventDefault();
+            }
+        });
+
+       
 
 	 
 }); // Ready handler end
 
 
 
-var count = 0;
+var count = 0; 
+
 
 function addToList() {
 
 var value = $('#main-input').val();   // get value of input field
-count++;
+count++; //increments counter
 
 	
 	if ($('#main-input').val()) {
 		if (count <= 10){
 
-			$('.add-list').append('<li class="clearfix strike">' + '<span>' + value + '</span>'
+			$('.add-list').append('<li class="clearfix strike new-item">' + '<span>' + value + '</span>'
 				 + '<button id="delete-icon">' + 
 				'</button>' + '<button id="edit-icon">' + 
 				'</button>' + '</li>' + '<div id="save-wrapper" class="clearfix">' + '<input type="text" id="edit">' + 
@@ -77,7 +119,7 @@ count++;
 
 		    $('.counter').text(count);  // sets counter
 
-		    $('.after-logo').finish().fadeIn(1000).delay(500).fadeOut(1000);
+		    $('.after-logo').finish().fadeIn(1500).fadeOut(500); // pig smoke effect
 		}
 
 		else {
@@ -90,7 +132,7 @@ count++;
 
 	else {
 		count -= 1;
-		alert('Write something');
+		alert('Your list must contain words silly!');
 	}
 
 };
