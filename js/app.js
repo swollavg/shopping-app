@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	
         // Adds Items to list
-		$('#main-submit').click(function(event){
+		$('.main-submit').click(function(event){
 			addToList();
 			event.preventDefault();  
 		});  
