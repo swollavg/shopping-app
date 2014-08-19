@@ -590,22 +590,13 @@ ul.add-list li.removed-item {
 		margin: 20px auto 0
 	}
 
+	button.email-submit {
+		
+	}
+
 	
 
 }
 
-@media (max-width: 320px) {
-	.header .pig-pic{
-		position: absolute;
-		width: 100px;
-		left: 0;
-		top: 15px;
-	}
-
-	h1.logo-text {
-		font-size: 195%;
-		
-	}
-}
 
 
